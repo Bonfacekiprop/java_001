@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    margin-top: 10px;
+}
+ul{
+    margin-top: 10px;
+    padding-left: 40px;
+}
