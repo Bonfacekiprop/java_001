@@ -11,7 +11,15 @@ document.querySelector('form').addEventListener('submit', function(e) {
     if (taskText !== '') {
         const taskItem = document.createElement('li');
         taskItem.textContent = taskText;
-        taskList.appendChild(taskItem);  
+        // create delete button 
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', function(){
+            taskItem.parentNode.removeChild(taskItem);
+        });
+        taskItem.appendChild(deleteButton);
+        taskList.appendChild(taskItem);
+       
         // clear the input field       
         taskInput.value = '';
     }
